@@ -12,9 +12,9 @@
  * @returns {number} Stig fyrir svör
  */
 export function score(total, correct, time) {
-  // todo útfæra
+  const scoreNum = Math.round(((((correct / total) ** 2) + correct) * total / time) * 100);
+  return scoreNum;
 }
-
 /**
  * Útbúa stigatöflu, sækir gögn í gegnum storage.js
  */
